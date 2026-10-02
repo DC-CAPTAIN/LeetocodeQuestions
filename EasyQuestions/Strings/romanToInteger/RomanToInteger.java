@@ -1,8 +1,10 @@
 // 13. Roman to Integer
 
-public class RomanToInteger{
-    public int romanToInteger(String s){
-        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+import java.util.HashMap;
+
+public class RomanToInteger {
+    public int romanToInteger(String s) {
+        HashMap<Character, Integer> hm = new HashMap<>();
         hm.put('I', 1);
         hm.put('V', 5);
         hm.put('X', 10);
@@ -13,9 +15,12 @@ public class RomanToInteger{
 
         int result = hm.get(s.charAt(s.length() - 1));
 
-        for(int i = s.length() - 2; i >= 0; i--){
-            if(hm.get(s.charAt(i)) < hm.get(s.charAt(i + 1))) result -= hm.get(s.charAt(i));
-            else result += hm.get(s.charAt(i));
+        for (int i = s.length() - 2; i >= 0; i--) {
+            if (hm.get(s.charAt(i)) < hm.get(s.charAt(i + 1))) {
+                result -= hm.get(s.charAt(i));
+            } else {
+                result += hm.get(s.charAt(i));
+            }
         }
         return result;
     }

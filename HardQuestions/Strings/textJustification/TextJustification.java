@@ -1,36 +1,29 @@
-//68. Text Justification
+// 68. Text Justification
 
-public class TextJustification{
-    public List<String> fullJustify(String[] words, int maxWidth){
-        public List<String> fullJustify(String[] words, int maxWidth) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class TextJustification {
+    public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> result = new ArrayList<>();
-
         int i = 0;
 
         while (i < words.length) {
-
             int j = i;
             int lineLength = 0;
 
-            while (j < words.length &&
-                   lineLength + words[j].length() + (j - i) <= maxWidth) {
-
+            while (j < words.length && lineLength + words[j].length() + (j - i) <= maxWidth) {
                 lineLength += words[j].length();
                 j++;
             }
 
-            int numberOfWords = j - i;
-            int spaces = maxWidth - lineLength;
-
+            int wordCount = j - i;
+            int remainingSpaces = maxWidth - lineLength;
             StringBuilder line = new StringBuilder();
 
-            if (j == words.length || numberOfWords == 1) {
-
+            if (j == words.length || wordCount == 1) {
                 for (int k = i; k < j; k++) {
-
                     line.append(words[k]);
-
                     if (k < j - 1) {
                         line.append(" ");
                     }
@@ -39,27 +32,20 @@ public class TextJustification{
                 while (line.length() < maxWidth) {
                     line.append(" ");
                 }
-
             } else {
-
-                int gaps = numberOfWords - 1;
-
-                int spacesPerGap = spaces / gaps;
-                int extraSpaces = spaces % gaps;
+                int gaps = wordCount - 1;
+                int spacesPerGap = remainingSpaces / gaps;
+                int extraSpaces = remainingSpaces % gaps;
 
                 for (int k = i; k < j; k++) {
-
                     line.append(words[k]);
 
                     if (k < j - 1) {
-
-                        int currentSpaces = spacesPerGap;
-
+                        int spacesToAdd = spacesPerGap;
                         if (k - i < extraSpaces) {
-                            currentSpaces++;
+                            spacesToAdd++;
                         }
-
-                        for (int s = 0; s < currentSpaces; s++) {
+                        for (int s = 0; s < spacesToAdd; s++) {
                             line.append(" ");
                         }
                     }
@@ -67,7 +53,6 @@ public class TextJustification{
             }
 
             result.add(line.toString());
-
             i = j;
         }
 
