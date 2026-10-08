@@ -1,5 +1,7 @@
 // 271. Encode and Decode Strings
 
+package MediumQuestions.Strings.encodeDecodeStrings;
+
 import java.util.ArrayList;
 import java.util.List;
 

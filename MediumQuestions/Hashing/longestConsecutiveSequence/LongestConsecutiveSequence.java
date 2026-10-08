@@ -1,3 +1,5 @@
+package MediumQuestions.Hashing.longestConsecutiveSequence;
+
 import java.util.HashSet;
 
 public class LongestConsecutiveSequence {

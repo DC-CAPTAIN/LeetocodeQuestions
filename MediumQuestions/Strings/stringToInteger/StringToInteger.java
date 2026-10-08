@@ -1,3 +1,5 @@
+package MediumQuestions.Strings.stringToInteger;
+
 public class StringToInteger {
     public int stringToInteger(String s) {
         if (s == null || s.length() == 0) return 0;

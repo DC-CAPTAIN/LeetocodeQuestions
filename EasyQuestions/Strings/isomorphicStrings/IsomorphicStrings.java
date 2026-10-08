@@ -1,5 +1,7 @@
 // 205. Isomorphic Strings
 
+package EasyQuestions.Strings.isomorphicStrings;
+
 import java.util.HashMap;
 
 public class IsomorphicStrings {
