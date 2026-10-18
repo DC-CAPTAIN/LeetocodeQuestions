@@ -1,6 +1,8 @@
 // 283. Move Zeroes
 // Two Pointer Approach
 
+package EasyQuestions.Arrays.moveZeroes;
+
 class MoveZeroes {
     public void moveZeroes(int[] nums) {
         int j = 0;

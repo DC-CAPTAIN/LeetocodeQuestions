@@ -1,3 +1,5 @@
+package HardQuestions.Strings.shortestPalindrome;
+
 public class ShortestPalindrome{
     public String shortestPalindrome(String s){
         String rev = new StringBuilder(s).reverse().toString();

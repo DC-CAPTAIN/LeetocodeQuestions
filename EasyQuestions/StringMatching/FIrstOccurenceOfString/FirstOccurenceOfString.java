@@ -1,5 +1,7 @@
 // 28. find the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
+package EasyQuestions.StringMatching.FIrstOccurenceOfString;
+
 public class FirstOccurenceOfString {
     public int firstOccurenceOfString(String haystack, String needle) {
         if (needle == null || needle.length() == 0) return 0;

@@ -1,6 +1,8 @@
 // 31. Next Permutation
 // swap + reverse
 
+package MediumQuestions.Arrays.nextPermutation;
+
 public class NextPermutation {
     public static void nextPermutation(int[] nums) {
         int i = nums.length - 2;

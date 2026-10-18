@@ -1,5 +1,7 @@
 // 68. Text Justification
 
+package HardQuestions.Strings.textJustification;
+
 import java.util.ArrayList;
 import java.util.List;
 
