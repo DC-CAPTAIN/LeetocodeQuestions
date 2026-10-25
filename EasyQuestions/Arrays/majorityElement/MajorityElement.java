@@ -1,6 +1,8 @@
 // 169. Majority Element
 // Boyer-Moore Voting Algorithm
 
+package EasyQuestions.Arrays.majorityElement;
+
 public class MajorityElement{
     public int majorityElement(int[] nums){
         int count = 0;

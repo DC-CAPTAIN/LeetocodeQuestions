@@ -49,7 +49,7 @@ class Solution{
 
         while(list.size() > 1){
             for(int i = 0; i < list.size(); i++){
-            Integer t = list.get(i);
+            String t = list.get(i);
 
             if(t.equals("+") || t.equals("-") || t.equals("*") || t.equals("/")){
                 int a = Integer.parseInt(list.get(i - 2));
