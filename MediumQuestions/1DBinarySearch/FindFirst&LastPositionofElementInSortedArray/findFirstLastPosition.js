@@ -1,0 +1,33 @@
+// 34. Find First and Last Position of Element in Sorted Array
+
+var searchRange = function(nums, target) {
+    function findBound(isFirst){
+        let left = 0;
+        right = nums.length - 1;
+        bound = -1;
+        while(left <= right){
+            const mid = Math.floor((left + right) / 2);
+            if(nums[mid] === target){
+                bound = mid;
+                if(isFirst){
+                    right = mid - 1;
+                }
+                else{
+                    left = mid + 1;
+                }
+            }
+            else if(nums[mid] < target){
+                left = mid + 1;
+            }
+            else{
+                right = mid - 1;
+            }
+        }
+        return bound;
+    }
+    const first = findBound(true);
+    const last = findBound(false);
+
+
+    return first === -1 ? [-1, -1] : [first, last];
+};
