@@ -1,5 +1,16 @@
+// 23. Merge k Sorted Lists
+
 import java.util.PriorityQueue;
-import java.util.List;
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+        this.next = null;
+    }
+}
 
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists){
@@ -29,14 +40,5 @@ public class MergeKSortedLists {
         }
 
         return dummy.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
     }
 }
